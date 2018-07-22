@@ -1,0 +1,13 @@
+﻿@model FoldersTree.Models.FolderViewModel
+
+<div class="container">
+    <h2>@Model.CurrentFolder.Name</h2>
+    <hr>
+    @{
+        foreach (var subFolder in Model.SubFolders)
+        {
+            <a href="@subFolder.Url">@subFolder.Name</a>
+            <br />
+        }
+    }
+</div>
